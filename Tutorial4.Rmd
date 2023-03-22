@@ -31,4 +31,16 @@ ggplot(dat, aes(x = x, y = y)) +
   geom_line()
 
 ```
+For random noise, see Figure \@ref(fig:Figref)
 
+# Learning to reference tables
+
+```{r dat_table, cache = TRUE}
+
+Table = dat %>%
+  head(5)
+
+knitr::kable(Table, booktabs = TRUE)
+  
+```
+For table, see Table \@ref(tab:dat_table)
