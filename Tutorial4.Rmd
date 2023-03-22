@@ -7,3 +7,28 @@ output:
 keep_md: true  
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align = "center",
+                      fig.path = "Figures/")
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+# Learning to reference figures 
+```{r Figref, fig.caption = "This is random noise."}
+
+x = seq(1:100)
+y = rnorm(100)
+dat = data.frame(x, y)
+
+ggplot(dat, aes(x = x, y = y)) + 
+  geom_line()
+
+```
+
